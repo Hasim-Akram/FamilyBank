@@ -6,10 +6,241 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Family Bank</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
 </head>
 
 <body>
 
+    <section class="text-center" id="fullsec">
+
+
+
+        <div class="conatiner" id="loginbody">
+            <div class="header">
+                <header>
+                    <h1>Welcomed To Family Bank</h1>
+                </header>
+
+            </div>
+            <container class="login">
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">User ID</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1"
+                        placeholder="name@example.com">
+                    <label for="exampleFormControlInput1" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="exampleFormControlInput2" placeholder="password">
+                    <br />
+                    <button id="login" class="btn btn-success" id="button" type="submit">LOG IN</button>
+                </div>
+
+
+
+            </container>
+
+
+        </div>
+
+        <div class="trnsectionarea" id="trnsectionarea">
+            <h1>Transections</h1>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="deposit status">
+                        <h1>deposit</h1>
+                        <h3><span id="cureentdeposit">00</span></h3>
+                    </div>
+
+                </div>
+                <div class="col-md-4">
+                    <div class="withdrow status">
+                        <h1>withdrow</h1>
+                        <h3><span id="withdrwal">00</span></h3>
+                    </div>
+
+                </div>
+                <div class="col-md-4">
+                    <div class="balance status">
+                        <h1>Balance</h1>
+                        <h3><span id="cureentbal">
+                                1200
+                            </span></h3>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="row dep-with-sec">
+
+                <div class="col-md-6">
+                    <div class="adddeposit status">
+                        <h4>Do Deposit</h4>
+                        <input id="depositamt" type="number" class="form-control">
+                        <br />
+                        <button class="btn btn-success" id="depositbal">Deposit</button>
+
+                    </div>
+
+
+                </div>
+                <div class="col-md-6">
+                    <div class="withdrowbal status">
+                        <h4>withdrow Money</h4>
+                        <input type="number" id="withdrowbb" class="form-control">
+                        <br />
+                        <button class=" btn btn-success" id="withdorwbal">Withdrow</button>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+
+
+    </section>
+
+
 </body>
+
+
+
+<script>
+    //log in button event handler
+    const loginbtn = document.getElementById("login").addEventListener("click", function () {
+        const loginsec = document.getElementById("loginbody").style.display = "none";
+        const Transecionsarea = document.getElementById("trnsectionarea").style.display = "block";
+
+
+
+
+    })
+
+
+</script>
+
+
+<script>
+
+    //deposit button event handler
+
+
+    const depositbal = document.getElementById("depositbal").addEventListener("click", function (totalDeposit) {
+
+        const depositamtentry = document.getElementById("depositamt").value;
+        const depositnumber = parseFloat(depositamtentry);
+
+
+        const currendep = document.getElementById("cureentdeposit").innerText;
+        const currendepnum = parseFloat(currendep);
+
+        var totalDeposit = depositnumber + currendepnum;
+
+
+        const currendephh = document.getElementById("cureentdeposit").innerText = totalDeposit;
+
+
+
+
+
+
+
+
+        document.getElementById("depositamt").value = "";
+
+
+        //balance
+
+        const showbal = document.getElementById("cureentbal").innerHTML;
+
+        const showcon = parseFloat(showbal);
+
+
+
+        const showtotal = totalDeposit + showcon;
+        //console.log(showtotal);
+        const showfig = document.getElementById("cureentbal").innerText = showtotal;
+
+        //console.log(showtotal);
+
+
+
+
+    })
+
+    //windrow handller 
+
+    const withhandler = document.getElementById("withdorwbal").addEventListener("click", function (totalDeposit) {
+
+        const cureentwldata = document.getElementById("withdrowbb").value;
+        const cureerntwlbald = parseFloat(cureentwldata);
+
+
+        const curwbal = document.getElementById("withdrwal").innerText;
+
+        const curwbalcon = parseFloat(curwbal);
+
+
+        var totalwbal = cureerntwlbald + curwbalcon;
+
+        const cureentwldatat = document.getElementById("withdrwal").innerText = totalwbal;
+
+
+
+        const netbal = document.getElementById("cureentbal").innerText;
+
+        const netbalcon = parseFloat(netbal);
+
+        console.log(netbalcon);
+
+        const netgrnttotal = netbalcon - cureerntwlbald;
+
+        const currtbbdd = document.getElementById("cureentbal").innerText = netgrnttotal;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    })
+
+    /* function balacecal() {
+         const depo = document.getElementById("cureentdeposit").innerText;
+         const withw = document.getElementById("withdrwal").innerText;
+
+         var finalval = depo + withw;
+         const showbal = document.getElementById("cureentbal").innerHTML = finalval;
+         console.log(depo);
+         console.log(withw);
+
+
+     }
+
+ */
+
+
+
+
+    //balace 
+
+
+
+
+
+
+
+</script>
 
 </html>

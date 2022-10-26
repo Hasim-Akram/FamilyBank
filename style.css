@@ -1,0 +1,45 @@
+body {
+    padding: 100px;
+
+}
+
+.header {
+    margin: 30px 10px;
+
+}
+
+.login {
+
+    padding: 50px;
+    text-align: left;
+    display: block;
+    box-shadow: 5px 5px 10px grey;
+    border-radius: 10px;
+    box-sizing: border-box;
+
+}
+
+.trnsectionarea {
+    display: none;
+}
+
+
+.status {
+
+    padding: 30px;
+    margin: 30px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px grey;
+}
+
+.deposit {
+    background-color: blueviolet;
+}
+
+.withdrow {
+    background-color: brown;
+}
+
+.balance {
+    background-color: orange;
+}
